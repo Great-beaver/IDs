@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+        <%: Html.ActionLink("Log Off", "LogOff", "Account") %>
     <h2>Index</h2>
 
     <table>

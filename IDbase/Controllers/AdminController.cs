@@ -14,6 +14,7 @@ namespace IDbase.Controllers
         //
         // GET: /Admin/
 
+        [Authorize(Roles="Administrators")]
         public ActionResult Index()
         {
             var ids = (from IDtable in db.IDtables select IDtable).ToList();
@@ -22,7 +23,7 @@ namespace IDbase.Controllers
 
         //
         // GET: /Admin/Details/5
-
+        [Authorize(Roles = "Administrators")]
         public ActionResult Details(int id)
         {
             var idDetails = (from IDtable in db.IDtables
@@ -33,7 +34,7 @@ namespace IDbase.Controllers
 
         //
         // GET: /Admin/Create
-
+        [Authorize(Roles = "Administrators")]
         public ActionResult Create()
         {
             IDtable id = new IDtable();
@@ -44,6 +45,7 @@ namespace IDbase.Controllers
         // POST: /Admin/Create
 
         [HttpPost]
+        [Authorize(Roles = "Administrators")]
         public ActionResult Create(IDtable id)
         {
             try
@@ -66,7 +68,7 @@ namespace IDbase.Controllers
         
         //
         // GET: /Admin/Edit/5
- 
+        [Authorize(Roles = "Administrators")]
         public ActionResult Edit(int id)
         {
             var idEdit = (from IDtable in db.IDtables
@@ -79,6 +81,7 @@ namespace IDbase.Controllers
         // POST: /Admin/Edit/5
 
         [HttpPost]
+        [Authorize(Roles = "Administrators")]
         public ActionResult Edit(int id, FormCollection collection)
         {
             var idEdit = (from IDtable in db.IDtables
@@ -99,7 +102,7 @@ namespace IDbase.Controllers
 
         //
         // GET: /Admin/Delete/5
- 
+        [Authorize(Roles = "Administrators")]
         public ActionResult Delete(int id)
         {
             var idDelete = (from IDtable in db.IDtables
@@ -112,6 +115,7 @@ namespace IDbase.Controllers
         // POST: /Admin/Delete/5
 
         [HttpPost]
+        [Authorize(Roles = "Administrators")]
         public ActionResult Delete(int id, FormCollection collection)
         {
             var idDelete = (from IDtable in db.IDtables
