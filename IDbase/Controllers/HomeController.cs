@@ -11,13 +11,17 @@ namespace IDbase.Controllers
     {
 
         private IDbaseEntities db = new IDbaseEntities();
-
+        private int PageSize = 1;
         //
         // GET: /Home/
 
-        public ActionResult Index()
+        public ActionResult Index(int PageNum = 0)
         {
-            var ids = (from IDtable in db.IDtables select IDtable ).ToList();
+            ViewData["PageNum"] = PageNum;
+            ViewData["ItemsCount"] = db.IDtables.Count(); 
+            ViewData["PageSize"] = PageSize;
+            var ids = (from IDtable in db.IDtables orderby IDtable.IDnumber select IDtable ).
+                Skip(PageSize * PageNum).Take(PageSize).ToList();
             return View(ids);
         }
 

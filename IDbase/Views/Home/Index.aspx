@@ -82,6 +82,11 @@
     </table>
 
     <p>
+        <%: Html.PagingNavigator((int)Html.ViewData["PageNum"], (int)Html.ViewData["ItemsCount"], (int)Html.ViewData["PageSize"])%>
+        
+    </p>
+
+    <p>
         <%: Html.ActionLink("Admin","Index", "Admin") %>
     </p>
 
