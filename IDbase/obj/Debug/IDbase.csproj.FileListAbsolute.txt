@@ -1,0 +1,5 @@
+C:\Users\Ilya.grishko\documents\visual studio 2010\Projects\IDbase\IDbase\bin\IDbase.dll
+C:\Users\Ilya.grishko\documents\visual studio 2010\Projects\IDbase\IDbase\bin\IDbase.pdb
+C:\Users\Ilya.grishko\documents\visual studio 2010\Projects\IDbase\IDbase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ilya.grishko\documents\visual studio 2010\Projects\IDbase\IDbase\obj\Debug\IDbase.dll
+C:\Users\Ilya.grishko\documents\visual studio 2010\Projects\IDbase\IDbase\obj\Debug\IDbase.pdb

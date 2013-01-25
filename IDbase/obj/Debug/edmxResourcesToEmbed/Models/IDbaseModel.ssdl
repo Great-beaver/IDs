@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IDbaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="IDbaseModelStoreContainer">
+    <EntitySet Name="IDtable" EntityType="IDbaseModel.Store.IDtable" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="IDtable">
+    <Key>
+      <PropertyRef Name="IDnumber" />
+    </Key>
+    <Property Name="IDnumber" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="Since" Type="date" />
+    <Property Name="Expire" Type="date" />
+    <Property Name="PlaceOfBirth" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sex" Type="bit" />
+    <Property Name="Photo" Type="image" />
+    <Property Name="Photo2" Type="varbinary(max)" />
+  </EntityType>
+</Schema>
